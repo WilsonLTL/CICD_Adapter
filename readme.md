@@ -1,11 +1,11 @@
 # CICD_runner_adapter
 ![Here](./readme_image/work_flow.jpeg)
-A adapter for virtual environment, to request api for update docker image, you should clone the adapter in your deploy location (e.g EC2, EBS) <br >
+An adapter for virtual environment, to request api for update docker image, you should clone the adapter in your deploy location (e.g EC2, EBS) <br >
 Demo video:https://www.youtube.com/watch?v=BXaibSEF5FU 
 
 ## 1. add .gitlab-ci.yml in the project
 1. .gitlab-ci.yml is a file for gitlab to kick start the CICD function, add to your project before doing the following step. 
-2. set up your .gitlab-ci.yml file in 3 stages : build for environment testing, test for unit testing, deploy for deployment testing. <br >
+2. Set up your .gitlab-ci.yml file in 3 stages : build for environment testing, test for unit testing, deploy for deployment testing. <br >
 Build for build testing, such as install the requirement in differ vision <br >
 Test for unit testing, such as run the server in code level, and test to build the docker image <br >
 Deploy for deployment testing, deploy the docker image in to docker hub <br >
