@@ -1,5 +1,5 @@
 # CICD_runner_adapter
-a adapter for virtual environment, to request api for update docker image
+A adapter for virtual environment, to request api for update docker image, you should clone the adapter in your deploy location (e.g EC2, EBS)
 
 # set up
 1. Install the following requirements
