@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="762829a0-3dfa-467c-9ee9-d0ca938f4108" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/readme_image/pic2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/readme_image/pic3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,8 +41,8 @@
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="2115">
-                <caret line="183" column="39" lean-forward="true" selection-start-line="183" selection-start-column="39" selection-end-line="183" selection-end-column="39" />
+              <first_editor relative-caret-position="-1671">
+                <caret line="58" column="7" lean-forward="true" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
                 <folding>
                   <element signature="e#473#1289#0" />
                 </folding>
@@ -92,9 +89,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="741" />
+    <option name="x" value="481" />
     <option name="y" value="23" />
-    <option name="width" value="1092" />
+    <option name="width" value="1352" />
     <option name="height" value="982" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -188,7 +185,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="741" y="23" width="1092" height="982" extended-state="0" />
+    <frame x="481" y="23" width="1352" height="982" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -198,7 +195,7 @@
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
       <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.10169491" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2447619" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1961832" />
       <window_info anchor="bottom" id="Docker" />
       <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="SciView" />
@@ -254,8 +251,8 @@
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="2115">
-            <caret line="183" column="39" lean-forward="true" selection-start-line="183" selection-start-column="39" selection-end-line="183" selection-end-column="39" />
+          <first_editor relative-caret-position="-1671">
+            <caret line="58" column="7" lean-forward="true" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
             <folding>
               <element signature="e#473#1289#0" />
             </folding>
