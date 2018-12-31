@@ -1,4 +1,5 @@
 # CICD_runner_adapter
+![Here](./readme_image/work_flow.jpeg)
 A adapter for virtual environment, to request api for update docker image, you should clone the adapter in your deploy location (e.g EC2, EBS) <br >
 Demo video:https://www.youtube.com/watch?v=BXaibSEF5FU 
 
