@@ -211,5 +211,5 @@ Please enter the gitlab-ci description for this runner
  - Write somethings you like 
 Please enter the gitlab-ci tags for this runner (comma separated):
  - Improtant: the tags name og Runner will affect you to assign the job to it in .gitlab-ci.yml, give it a "good" tag name
- 
 ```
+After registered, you should able to view the runner in the panel 
