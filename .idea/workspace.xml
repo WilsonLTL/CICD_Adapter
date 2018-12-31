@@ -32,7 +32,7 @@
         <entry file="file://$PROJECT_DIR$/update.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" selection-end-line="8" />
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -41,8 +41,8 @@
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-1779">
-                <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+              <first_editor relative-caret-position="321">
+                <caret line="193" column="20" lean-forward="true" selection-start-line="193" selection-start-column="20" selection-end-line="193" selection-end-column="20" />
                 <folding>
                   <element signature="e#473#1289#0" />
                 </folding>
@@ -92,7 +92,7 @@
     <option name="x" value="481" />
     <option name="y" value="23" />
     <option name="width" value="1352" />
-    <option name="height" value="981" />
+    <option name="height" value="979" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -106,11 +106,6 @@
             <path>
               <item name="CICD_runner_adapter" type="b2602c69:ProjectViewProjectNode" />
               <item name="CICD_runner_adapter" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CICD_runner_adapter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CICD_runner_adapter" type="462c0819:PsiDirectoryNode" />
-              <item name="readme_image" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -185,7 +180,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="481" y="23" width="1352" height="981" extended-state="0" />
+    <frame x="481" y="23" width="1352" height="979" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -194,7 +189,7 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.3291714" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Python Console" />
-      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.101809956" />
+      <window_info active="true" anchor="bottom" id="Terminal" visible="true" weight="0.10204082" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1961832" />
       <window_info anchor="bottom" id="Docker" />
       <window_info anchor="right" id="Database" />
@@ -231,13 +226,6 @@
     <entry file="file://$PROJECT_DIR$/readme_image/pic1.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/update.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -251,11 +239,18 @@
     <entry file="file://$PROJECT_DIR$/readme_image/work_flow.jpeg">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/update.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-1779">
-            <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <first_editor relative-caret-position="321">
+            <caret line="193" column="20" lean-forward="true" selection-start-line="193" selection-start-column="20" selection-end-line="193" selection-end-column="20" />
             <folding>
               <element signature="e#473#1289#0" />
             </folding>

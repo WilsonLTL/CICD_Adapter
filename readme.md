@@ -199,6 +199,7 @@ sudo docker run -d \
 gitlab/gitlab-runner:latest
 sudo docker exec -it gitlab-runner-docker gitlab-runner register
 ```
+PS: Run as sudo if permission denied 
 ### 2. Register your runner
 To register your runner, you need to visit your gitlab project by setting -> CI/CD -> Runners
 ![Here](./readme_image/pic3.png)
