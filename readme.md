@@ -6,6 +6,10 @@ Demo video:https://www.youtube.com/watch?v=BXaibSEF5FU
 ## Requirements
 Gitlab account
 
+## Adapter API:
+[POST:GET] /update_docker <br >
+[POST:GET] /run_docker <br >
+
 ## 1. add .gitlab-ci.yml in the project
 1. .gitlab-ci.yml is a file for gitlab to kick start the CICD function, add to your project before doing the following step. 
 2. Set up your .gitlab-ci.yml file in 3 stages : build for environment testing, test for unit testing, deploy for deployment testing. <br >
@@ -100,7 +104,7 @@ docker-test:
   script:
     - docker login -u wilsonloltl -p Vi26151851@
     - docker build -t wilsonloltl/docker_cicd_testing:cicd-demo .
-    - docker run -d -p 5000:8080 wilsonloltl/docker_cicd_testing:cicd-demo .
+    - docker run -d -p 5000:8080 wilsonloltl/docker_cicd_testing:cicd-demo
   only:
     - master
 

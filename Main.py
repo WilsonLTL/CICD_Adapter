@@ -5,8 +5,7 @@ import subprocess
 app = Flask(__name__)
 CORS(app)
 
-location = "home/ubuntu/cicd_adapter"
-
+location = "/home/ubuntu/cicd_adapter"
 
 @app.route('/',methods=['POST','GET'])
 def enter_api_system():
