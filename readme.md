@@ -1,10 +1,9 @@
 # CICD_runner_adapter
-![Here](./readme_image/work_flow.jpeg)
+![Here](./readme_image/Asiabots CI_CD.png)
 An adapter for virtual environment, to request api for update docker image, you should clone the adapter in your deploy location (e.g EC2, EBS) <br >
 Demo video:https://www.youtube.com/watch?v=BXaibSEF5FU 
 
 ## Requirements
-Dockerfile
 Gitlab account
 
 ## 1. add .gitlab-ci.yml in the project
@@ -42,9 +41,9 @@ docker-test:
     - docker:dind
   stage: test
   script:
-  - docker login -u wilsonloltl -p Vi26151851@
-  - docker build -t wilsonloltl/nlpwordcloud:nlpwordcloud .
-  - docker run -d -p 5000:5000 wilsonloltl/nlpwordcloud:nlpwordcloud
+  - docker login registry.gitlab.com -u wilsonlo1997@gmail.com -p Vi26151851@
+  - docker build -t registry.gitlab.com/asiabots/wilson/cantonese-nlp .
+  - docker run -d -p 5000:8080 registry.gitlab.com/asiabots/wilson/cantonese-nlp
 
 docker-deploy:
   image: docker:latest
@@ -52,9 +51,9 @@ docker-deploy:
       - docker:dind
   stage: deploy
   script:
-      - docker login -u wilsonloltl -p Vi26151851@
-      - docker build -t wilsonloltl/nlpwordcloud:nlpwordcloud .
-      - docker push wilsonloltl/nlpwordcloud:nlpwordcloud
+      - docker login registry.gitlab.com -u wilsonlo1997@gmail.com -p Vi26151851@
+      - docker build -t registry.gitlab.com/asiabots/wilson/cantonese-nlp .
+      - docker push registry.gitlab.com/asiabots/wilson/cantonese-nlp
   only:
       - master
 ```
@@ -118,6 +117,7 @@ docker-deploy:
 ```
 
 *PS: You should regisiter a docker hub account and create a new repo for the project, also modify the following code in deploy stage to deploy
+![Here](./readme_image/pic4.png)
 ```
 docker-deploy:
   image: docker:latest
@@ -126,8 +126,8 @@ docker-deploy:
   stage: deploy
   script:
     - docker login -u USERNAME -p PASSWORD
-    - docker build -t USERNAME/REPO_NAME:TAG_NAME .
-    - docker push USERNAME/REPO_NAME:TAG_NAME
+    - docker build -t registry.gitlab.com/REPO_NAME
+    - docker push registry.gitlab.com/REPO_NAME
   only:
     - master
 ```
@@ -141,20 +141,18 @@ For sure, enter to your EC2 or EBS by ssh, clone and cd the adapter
 
 1. Install the following requirements
 ```
-apt-get update -qy
-apt install python-pip -qy
-apt install docker.io -qy
-pip install -r requirements.txt
+cd cicd_adapter
+sudo bash config_setting.sh
 ```
 2. Modify update.sh file 
 ```
 line2: Your docker hub account and password
-line3: Pull the docker image -> USERNAME/REPO_NAME:TAG_NAME
+line3: Pull the docker image -> registry.gitlab.com/REPO_NAME
 line4: The port connect to docker exposed port -> LOCATEPORT:DOCKERPORT
 ```
 3. Auto setting
 ```
-cd ~/usr/sbin
+cd /usr/sbin
 sudo touch api.sh
 sudo chown root:root api.sh
 sudo chmod +x api.sh
@@ -173,11 +171,11 @@ The adapter should be auto kick start after reboot in port 8080
 ### Detail for update.sh
 ```
 #!/usr/bin/env bash
-sudo docker login -u wilsonloltl -p Vi26151851@    ---- Login the account
-sudo docker pull wilsonloltl/docker_cicd_testing:cicd-demo    --- Pull the latest image
-sudo docker stop $(sudo docker ps -aq)   --- Stop all the container 
-sudo docker rm $(sudo docker ps -aq)   --- Remove all the container
-sudo docker run -d -p 5000:5000 wilsonloltl/docker_cicd_testing:cicd-demo   --- Start the container again with the lastest image vision
+sudo docker login registry.gitlab.com -u wilsonlo1997@gmail.com -p Vi26151851@  -- Login the Gitlab account
+sudo docker pull registry.gitlab.com/asiabots/wilson/cantonese-nlp  --  Pull th image
+sudo docker stop $(sudo docker ps -aq)  -- Stop all container
+sudo docker rm $(sudo docker ps -aq)  -- Remove all container
+sudo docker run -d -p 5000:5000 registry.gitlab.com/asiabots/wilson/cantonese-nlp  -- Run the container again
 ```
 
 ### CD part
