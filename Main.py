@@ -34,8 +34,9 @@ def run_docker():
     try:
         subprocess.call(["./run_docker.sh"])
         return jsonify(result)
-    except:
-        return jsonify({"result": "fail"})
+    except Exception as e:
+        print(e)
+        return jsonify({"result": "fail:"+e})
 
 
 
