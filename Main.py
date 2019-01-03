@@ -15,15 +15,28 @@ def enter_api_system():
 
 
 @app.route('/update_docker',methods=['POST','GET'])
-def alert_update():
+def update_docker():
     result = {
-        "result": "receive, docker container updating"
+        "result": "receive, docker container updated"
     }
     try:
         subprocess.call(["./update.sh"])
         return jsonify(result)
     except:
         return jsonify({"result": "fail"})
+
+
+@app.route('run_docker', methods=['POST','GET'])
+def run_docker():
+    result = {
+        "result": "receive, docker container is running"
+    }
+    try:
+        subprocess.call(["./run_docker.sh"])
+        return jsonify(result)
+    except:
+        return jsonify({"result": "fail"})
+
 
 
 if __name__ == '__main__':
