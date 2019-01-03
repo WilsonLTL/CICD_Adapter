@@ -26,7 +26,7 @@ def update_docker():
         return jsonify({"result": "fail"})
 
 
-@app.route('/run_docker', methods=['POST','GET'])
+@app.route('/run_docker',methods=['POST','GET'])
 def run_docker():
     result = {
         "result": "receive, docker container is running"
@@ -37,7 +37,6 @@ def run_docker():
     except Exception as e:
         print(e)
         return jsonify({"result": "fail:"+e})
-
 
 
 if __name__ == '__main__':
