@@ -100,6 +100,7 @@ docker-test:
   script:
     - docker login -u wilsonloltl -p Vi26151851@
     - docker build -t wilsonloltl/docker_cicd_testing:cicd-demo .
+    - docker run -d -p 5000:8080 wilsonloltl/docker_cicd_testing:cicd-demo .
   only:
     - master
 

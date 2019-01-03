@@ -5,6 +5,8 @@ import subprocess
 app = Flask(__name__)
 CORS(app)
 
+location = "home/USERNAME/cicd_adapter"
+
 
 @app.route('/',methods=['POST','GET'])
 def enter_api_system():
@@ -20,7 +22,7 @@ def update_docker():
         "result": "receive, docker container updated"
     }
     try:
-        subprocess.call(["./update.sh"])
+        subprocess.call([location+"/update.sh"])
         return jsonify(result)
     except:
         return jsonify({"result": "fail"})
@@ -32,7 +34,7 @@ def run_docker():
         "result": "receive, docker container is running"
     }
     try:
-        subprocess.call(["./run_docker.sh"])
+        subprocess.call([location+"/run_docker.sh"])
         return jsonify(result)
     except Exception as e:
         print(e)
