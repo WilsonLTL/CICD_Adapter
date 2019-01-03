@@ -3,6 +3,10 @@
 An adapter for virtual environment, to request api for update docker image, you should clone the adapter in your deploy location (e.g EC2, EBS) <br >
 Demo video:https://www.youtube.com/watch?v=BXaibSEF5FU 
 
+## Requirements
+Dockerfile
+Gitlab account
+
 ## 1. add .gitlab-ci.yml in the project
 1. .gitlab-ci.yml is a file for gitlab to kick start the CICD function, add to your project before doing the following step. 
 2. Set up your .gitlab-ci.yml file in 3 stages : build for environment testing, test for unit testing, deploy for deployment testing. <br >
@@ -127,7 +131,7 @@ docker-deploy:
   only:
     - master
 ```
-3. add and push your .gitlab-ci.yml, you can check the format in gitlab, which locate in CI/CD -> Pipeline -> CI Lint
+3. update your project into gitlab, before push the project, you can check the format in gitlab, which locate in CI/CD -> Pipeline -> CI Lint
 ![Here](./readme_image/pic1.png)
 4. If the file follow format,git CI will start running, you can take a look in CI/CD Pipeline, for more detail,just click it :D
 ![Here](./readme_image/pic2.png)
@@ -138,8 +142,8 @@ For sure, enter to your EC2 or EBS by ssh, clone and cd the adapter
 1. Install the following requirements
 ```
 apt-get update -qy
-apt install python-pip
-apt install docker.io
+apt install python-pip -qy
+apt install docker.io -qy
 pip install -r requirements.txt
 ```
 2. Modify update.sh file 
@@ -156,8 +160,8 @@ sudo chown root:root api.sh
 sudo chmod +x api.sh
 sudo nano api.sh
 code in api.sh:
-    cd /home/USERNAME/CICD_Adapter
-    python3 Main.py
+    cd /home/$USER/cicd_adapter
+    python Main.py
 crontab -e
 add in the last line: @reboot /usr/sbin/api.sh
 For EBS: press ESC, :wq to leave
