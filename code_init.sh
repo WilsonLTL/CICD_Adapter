@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
-cd /home/USERNAME/
+cd /home/ubuntu/
 git clone PROJRCT

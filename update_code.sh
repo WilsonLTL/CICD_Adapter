@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-cd /home/USERNAME/PROJRCT
+cd /home/ubuntu/PROJRCT
 git pull
 Python PROJECTFILE

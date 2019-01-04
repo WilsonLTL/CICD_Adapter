@@ -149,7 +149,7 @@ For sure, enter to your EC2 or EBS by ssh, clone and cd the adapter
 cd cicd_adapter
 sudo bash config_setting.sh
 ```
-2. Modify update.sh file 
+2. Modify update.sh file and run_docker.sh
 ```
 line2: Your docker hub account and password
 line3: Pull the docker image -> registry.gitlab.com/REPO_NAME
