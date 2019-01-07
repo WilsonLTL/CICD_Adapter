@@ -141,7 +141,7 @@ docker-deploy:
 4. If the file follow format,git CI will start running, you can take a look in CI/CD Pipeline, for more detail,just click it :D
 ![Here](./readme_image/pic2.png)
 
-## 2. Set up the adapter in your locate environment
+## 2. Set up the adapter in your locate environment (docker vision)
 For sure, enter to your EC2 or EBS by ssh, clone and cd the adapter
 
 1. Install the following requirements
@@ -185,7 +185,10 @@ sudo docker run -d -p 5000:5000 registry.gitlab.com/asiabots/wilson/cantonese-nl
 
 ### CD part
 There are two type of CD : Manual CD and Auto CD :<br >
-1. Manual CD, after the Pipeline is finish, then you can send a request to the adapter server in HOSTADDRESS:PORT/update_docker, POST or GET is ok too,
+1. Manual CD, after the Pipeline is finish, then you can send a request to the adapter server to update:
+ HOSTADDRESS:PORT/update_docker, POST or GET is ok too.
+ If your ec2/ebs restart, you should call the server to run the docker:
+ HOSTADDRESS:PORT/run_docker, POST or GET is ok too.
 the system will auto pull the latest vision of docker hub and restart the container.
 3. Auto CD, you can modify the code in .gitlab-ci.yml - deploy part, to curl a request to adapter after push the image into docker hub.
 
