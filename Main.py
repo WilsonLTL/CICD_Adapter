@@ -8,6 +8,7 @@ CORS(app)
 
 location = "/home/ubuntu/cicd_adapter"
 
+
 @app.route('/',methods=['POST','GET'])
 def enter_api_system():
     result = {
@@ -28,7 +29,7 @@ def update_docker():
         return jsonify({"result": "fail"})
 
 
-@app.route('update_code', methods=['POST','GET'])
+@app.route('/update_code', methods=['POST','GET'])
 def update_code():
     result = {
         "result": "receive, system updated"
@@ -59,23 +60,19 @@ def run_code():
         "result": "receive, system will restart in 5 second"
     }
     try:
-        thread_a = Compute(request.__copy__())
-        thread_a.start()
+        thread_restart = Thread(target=restart)
+        thread_restart.start()
         return jsonify(result)
     except Exception as e:
         print(e)
         return jsonify({"result": "fail:" + e})
 
 
-class Compute(Thread):
-    def __init__(self, request):
-        Thread.__init__(self)
-        self.request = request
+def restart():
+    print("start")
+    time.sleep(5)
+    subprocess.call([location + "/run_docker.sh"])
 
-    def run(self):
-        print("start")
-        time.sleep(5000)
-        subprocess.call([location + "/run_docker.sh"])
 
 if __name__ == '__main__':
     # app.run(host="127.0.0.1", port=5000)
