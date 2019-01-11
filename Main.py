@@ -71,7 +71,7 @@ def run_code():
 def restart():
     print("start")
     time.sleep(5)
-    subprocess.call([location + "/run_docker.sh"])
+    subprocess.call([location + "/run_code.sh"])
 
 
 if __name__ == '__main__':

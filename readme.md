@@ -183,12 +183,66 @@ sudo docker rm $(sudo docker ps -aq)  -- Remove all container
 sudo docker run -d -p 5000:5000 registry.gitlab.com/asiabots/wilson/cantonese-nlp  -- Run the container again
 ```
 
+## 2.Set up the adapter in your locate environment (code vision)
+For sure, enter to your EC2 or EBS by ssh, clone and cd the adapter
+
+1. Install the following requirements
+```
+cd cicd_adapter
+sudo bash config_setting.sh
+```
+2. Modify code_init file
+```
+line3: clone your target project (if user_name and password are needed, please enter it too)
+```
+3. Modify update_code file
+```
+Line2: cd to the project location
+```
+4. Autosetting in cicd_adapter
+```
+cd /usr/sbin
+sudo touch api.sh
+sudo chown root:root api.sh
+sudo chmod +x api.sh
+sudo nano api.sh
+code in api.sh:
+    cd /home/$USER/cicd_adapter
+    python Main.py
+crontab -e
+add in the last line: @reboot /usr/sbin/api.sh
+For EBS: press ESC, :wq to leave
+For ec2: press control+x , y to leave
+sudo reboot
+```
+The adapter should be auto kick start after reboot in port 8080
+
+5. Auto setting in your project
+```
+cd /usr/sbin
+sudo touch server.sh
+sudo chown root:root server.sh
+sudo chmod +x server.sh
+sudo nano api.sh
+code in api.sh:
+    cd /home/$USER/PROJECT
+    -- for python: python Main.py
+    -- for node: http-server -p 80 , or as you want (remeber to install it too)
+crontab -e
+add in the last line: @reboot /usr/sbin/server.sh
+For EBS: press ESC, :wq to leave
+For ec2: press control+x , y to leave
+sudo reboot
+```
+
 ### CD part
 There are two type of CD : Manual CD and Auto CD :<br >
-1. Manual CD, after the Pipeline is finish, then you can send a request to the adapter server to update:
- HOSTADDRESS:PORT/update_docker, POST or GET is ok too.
- If your ec2/ebs restart, you should call the server to run the docker:
- HOSTADDRESS:PORT/run_docker, POST or GET is ok too.
+1. Manual CD, after the Pipeline is finish, then you can send a request to the adapter server to update the docker dile: <br >
+ HOSTADDRESS:PORT/update_docker, POST or GET is ok too.<br >
+ If your ec2/ebs restart, you should call the server to run the docker: <br >
+ HOSTADDRESS:PORT/run_docker, POST or GET is ok too. <br >
+ If you are using code vision : <br>
+ 
 the system will auto pull the latest vision of docker hub and restart the container.
 3. Auto CD, you can modify the code in .gitlab-ci.yml - deploy part, to curl a request to adapter after push the image into docker hub.
 
