@@ -68,6 +68,18 @@ def run_code():
         return jsonify({"result": "fail:" + e})
 
 
+@app.route("/start_ngrok", methods=['POST'])
+def start_ngrok():
+    thread_restart = Thread(target=run_ngrok_server)
+    thread_restart.start()
+    return jsonify({"status":"ngrok kick starting"})
+
+
+def run_ngrok_server():
+    time.sleep(5)
+    subprocess.call([location + "/ngrok.sh"])
+
+
 def restart():
     print("start")
     time.sleep(5)
