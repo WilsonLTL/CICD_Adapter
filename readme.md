@@ -189,6 +189,7 @@ To cloen the gitlab project with out SSH, you need to generate a access_token in
 "Setting" -> "Access Token" -> Enter the name and Expire date -> Tick all the Scopes (except api) -> create and copy the access_token <br >
 And then change your clone code to :git clone https://USERNAME:ACCESS_TOKEN@gitlab.com/xxx/xxx/xxx.git/ <br >
 e.g: git clone https://WilsonLTL:QxSC_AAhGbVH5BQyYvTC@gitlab.com/asiabots/wilson/cantonese-nlp.git
+![Here](./readme_image/pic5.png)
 
 1. Install the following requirements
 ```
