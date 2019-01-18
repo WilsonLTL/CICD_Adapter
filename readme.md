@@ -184,7 +184,11 @@ sudo docker run -d -p 5000:5000 registry.gitlab.com/asiabots/wilson/cantonese-nl
 ```
 
 ## 2.Set up the adapter in your locate environment (code vision)
-For sure, enter to your EC2 or EBS by ssh, clone and cd the adapter
+For sure, enter to your EC2 or EBS by ssh, clone and cd the adapter <br >
+To cloen the gitlab project with out SSH, you need to generate a access_token in gitlab:
+"Setting" -> "Access Token" -> Enter the name and Expire date -> Tick all the Scopes (except api) -> create and copy the access_token <br >
+And then change your clone code to :git clone https://USERNAME:ACCESS_TOKEN@gitlab.com/xxx/xxx/xxx.git/ <br >
+e.g: git clone https://WilsonLTL:QxSC_AAhGbVH5BQyYvTC@gitlab.com/asiabots/wilson/cantonese-nlp.git
 
 1. Install the following requirements
 ```
@@ -194,6 +198,7 @@ sudo bash config_setting.sh
 2. Modify code_init file
 ```
 line3: clone your target project (if user_name and password are needed, please enter it too)
+e.g git clone 
 ```
 3. Modify update_code file
 ```

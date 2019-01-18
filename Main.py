@@ -37,8 +37,8 @@ def update_code():
     try:
         subprocess.call([location+"/update_code.sh"])
         return jsonify(result)
-    except:
-        return jsonify({"result": "fail"})
+    except Exception as e:
+        return jsonify({"result": "fail","exception": str(e)})
 
 
 @app.route('/run_docker',methods=['POST','GET'])
@@ -51,7 +51,7 @@ def run_docker():
         return jsonify(result)
     except Exception as e:
         print(e)
-        return jsonify({"result": "fail:"+e})
+        return jsonify({"result": "fail:","exception": str(e)})
 
 
 @app.route('/run_code',methods=['POST','GET'])
@@ -65,7 +65,7 @@ def run_code():
         return jsonify(result)
     except Exception as e:
         print(e)
-        return jsonify({"result": "fail:" + e})
+        return jsonify({"result": "fail:","exception": str(e)})
 
 
 @app.route("/start_ngrok", methods=['POST'])
