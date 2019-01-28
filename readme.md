@@ -279,7 +279,7 @@ EB-Deploy runner setting
 5. sudo gitlab-runner install --user=gitlab-runner --working-directory=/home/gitlab-runner
 6. sudo gitlab-runner regisiter
 7. In your gitlab project, go to CICD -> Environment variables -> set the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY from credentials.csv (IAM account in aws,full permission)
-8. In ebdeploy, modify CI file, add tags to point to your runner.
+8. In eb-eploy, modify CI file, add tags to point to your runner (if u need).
 ```
 
 To deploy your app to EBS, please make sure that is docker
@@ -297,8 +297,6 @@ eb-deploy:
     - printf "[profile eb-cli]\nregion=us-west-2\noutput=json" >> ~/.aws/config
     - eb init application_name -r ap-southeast-1 -p docker
     - eb deploy env_name
-  tags:
-    - eb-deploy
 ```
 
 ### 4. Unittest - Mocha & Pocha
