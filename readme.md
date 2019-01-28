@@ -119,6 +119,16 @@ docker-deploy:
     - docker push wilsonloltl/docker_cicd_testing:cicd-demo
   only:
     - master
+    
+eb-deploy:
+  stage: deploy
+  script:
+    - bash eb-deploy.sh
+    - eb init testing-env -r ap-southeast-1 -p docker
+    - eb deploy testing-env2
+  tags:
+    - eb-deploy
+    
 ```
 
 *PS: You should regisiter a docker hub account and create a new repo for the project, also modify the following code in deploy stage to deploy
@@ -251,6 +261,90 @@ There are two type of CD : Manual CD and Auto CD :<br >
  
 the system will auto pull the latest vision of docker hub and restart the container.
 3. Auto CD, you can modify the code in .gitlab-ci.yml - deploy part, to curl a request to adapter after push the image into docker hub.
+
+### CD to EBS
+To deploy the docker file to EBS, please follow the following step
+```
+1. Install EB CLI in your localhost, finish the init (eb init)
+2. Create a new deploy env for the project (eb create $envname)
+3. If the init successful, Please modify EB-deploy stage in CI tags to your target deploy runner
+```
+
+EB-Deploy runner setting
+```
+1. sudo wget -O /usr/local/bin/gitlab-runner https://gitlab-runner-downloads.s3.amazonaws.com/latest/binaries/gitlab-runner-linux-amd64
+2. sudo chmod +x /usr/local/bin/gitlab-runner
+3. curl -sSL https://get.docker.com/ | sh
+4. sudo useradd --comment 'GitLab Runner' --create-home gitlab-runner --shell /bin/bash
+5. sudo gitlab-runner install --user=gitlab-runner --working-directory=/home/gitlab-runner
+6. sudo gitlab-runner regisiter
+7. In your gitlab project, go to CICD -> Environment variables -> set the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY from credentials.csv (IAM account in aws,full permission)
+8. In ebdeploy, modify CI file, add tags to point to your runner.
+```
+
+To deploy your app to EBS, please make sure that is docker
+```
+eb-deploy:
+  stage: deploy
+  script:
+    - apt-get update
+    - apt-get install -y -qq python python-dev python-pip ca-certificates
+    - pip install awsebcli --upgrade --ignore-installed
+    - mkdir ~/.aws/
+    - touch ~/.aws/credentials
+    - printf "[eb-cli]\naws_access_key_id = %s\naws_secret_access_key = %s\n" "$AWS_ACCESS_KEY_ID" "$AWS_SECRET_ACCESS_KEY" >> ~/.aws/credentials
+    - touch ~/.aws/config
+    - printf "[profile eb-cli]\nregion=us-west-2\noutput=json" >> ~/.aws/config
+    - eb init application_name -r ap-southeast-1 -p docker
+    - eb deploy env_name
+  tags:
+    - eb-deploy
+```
+
+### Unittest - Mocha & Pocha
+```
+from pocha import it,describe
+import requests
+
+
+@describe('routing testing')
+def _():
+    @it('routing:api system check')
+    def test_init():
+        url = "http://127.0.0.1:8080/"
+        payload = ""
+        headers = {
+            'Content-Type': "application/json",
+            'cache-control': "no-cache",
+            'Postman-Token': "7759277d-6293-49e5-b194-5b0a2085b1e1"
+        }
+        response = requests.request("POST", url, data=payload, headers=headers)
+        # assert (response.text == "...")
+
+    @it('routing:get_player_card_data')
+    def test1():
+        url = "http://127.0.0.1:8080/get_player_card_data"
+        payload = ""
+        headers = {
+            'Content-Type': "application/json",
+            'cache-control': "no-cache",
+            'Postman-Token': "7759277d-6293-49e5-b194-5b0a2085b1e1"
+        }
+        response = requests.request("POST", url, data=payload, headers=headers)
+        # assert (response.text == "...")
+
+    @it('routing:get_mission_card_data')
+    def test2():
+        url = "http://127.0.0.1:8080/get_mission_card_data"
+        payload = ""
+        headers = {
+            'Content-Type': "application/json",
+            'cache-control': "no-cache",
+            'Postman-Token': "7759277d-6293-49e5-b194-5b0a2085b1e1"
+        }
+        response = requests.request("POST", url, data=payload, headers=headers)
+        # assert (response.text == "...")
+```
 
 
 ## Option: setup your own gitlab runner
