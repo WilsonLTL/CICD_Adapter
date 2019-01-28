@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="762829a0-3dfa-467c-9ee9-d0ca938f4108" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/eb-deploy.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_docker.sh" beforeDir="false" afterPath="$PROJECT_DIR$/run_docker.sh" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -94,11 +91,12 @@
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="44">
-                <caret line="303" column="24" selection-start-line="303" selection-start-column="24" selection-end-line="303" selection-end-column="24" />
+              <first_editor relative-caret-position="346">
+                <caret line="305" column="67" lean-forward="true" selection-start-line="305" selection-start-column="67" selection-end-line="305" selection-end-column="67" />
                 <folding>
                   <element signature="e#968#1894#0" />
                   <element signature="e#1915#3084#0" />
+                  <element signature="e#9513#10928#0" />
                 </folding>
               </first_editor>
               <second_editor />
@@ -177,10 +175,10 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="735" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="841" />
     <option name="y" value="23" />
-    <option name="width" value="941" />
+    <option name="width" value="839" />
     <option name="height" value="982" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -274,7 +272,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="735" y="23" width="941" height="982" extended-state="0" />
+    <frame x="0" y="23" width="1676" height="982" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -283,8 +281,8 @@
       <window_info anchor="bottom" id="Run" order="2" weight="0.3291714" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.21129943" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17130144" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.21129943" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.094247244" />
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="right" id="Database" order="3" weight="0.329235" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -370,6 +368,7 @@
             <folding>
               <element signature="e#968#1894#0" />
               <element signature="e#1915#3084#0" />
+              <element signature="e#9513#10928#0" />
             </folding>
           </first_editor>
           <second_editor />
@@ -453,6 +452,7 @@
             <folding>
               <element signature="e#968#1894#0" />
               <element signature="e#1915#3084#0" />
+              <element signature="e#9513#10928#0" />
             </folding>
           </first_editor>
           <second_editor />
@@ -552,11 +552,12 @@
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="44">
-            <caret line="303" column="24" selection-start-line="303" selection-start-column="24" selection-end-line="303" selection-end-column="24" />
+          <first_editor relative-caret-position="346">
+            <caret line="305" column="67" lean-forward="true" selection-start-line="305" selection-start-column="67" selection-end-line="305" selection-end-column="67" />
             <folding>
               <element signature="e#968#1894#0" />
               <element signature="e#1915#3084#0" />
+              <element signature="e#9513#10928#0" />
             </folding>
           </first_editor>
           <second_editor />

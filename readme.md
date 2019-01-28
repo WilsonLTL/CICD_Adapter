@@ -251,7 +251,7 @@ For ec2: press control+x , y to leave
 sudo reboot
 ```
 
-### CD part
+###3. CD part
 There are two type of CD : Manual CD and Auto CD :<br >
 1. Manual CD, after the Pipeline is finish, then you can send a request to the adapter server to update the docker dile: <br >
  HOSTADDRESS:PORT/update_docker, POST or GET is ok too.<br >
@@ -262,7 +262,7 @@ There are two type of CD : Manual CD and Auto CD :<br >
 the system will auto pull the latest vision of docker hub and restart the container.
 3. Auto CD, you can modify the code in .gitlab-ci.yml - deploy part, to curl a request to adapter after push the image into docker hub.
 
-### CD to EBS
+###3.1 CD to EBS
 To deploy the docker file to EBS, please follow the following step
 ```
 1. Install EB CLI in your localhost, finish the init (eb init)
@@ -301,7 +301,9 @@ eb-deploy:
     - eb-deploy
 ```
 
-### Unittest - Mocha & Pocha
+###4. Unittest - Mocha & Pocha
+You also can run unittest in your project by using mocha or pocha(python vision mocha) <br >
+To run the script, just enter "pocha test.py / mocha test.js" <br >
 ```
 from pocha import it,describe
 import requests
