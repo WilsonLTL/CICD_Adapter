@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="762829a0-3dfa-467c-9ee9-d0ca938f4108" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
-    </list>
+    <list default="true" id="762829a0-3dfa-467c-9ee9-d0ca938f4108" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,8 +89,8 @@
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="346">
-                <caret line="305" column="67" lean-forward="true" selection-start-line="305" selection-start-column="67" selection-end-line="305" selection-end-column="67" />
+              <first_editor relative-caret-position="150">
+                <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
                 <folding>
                   <element signature="e#968#1894#0" />
                   <element signature="e#1915#3084#0" />
@@ -175,10 +173,10 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="841" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="846" />
     <option name="y" value="23" />
-    <option name="width" value="839" />
+    <option name="width" value="830" />
     <option name="height" value="982" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -272,7 +270,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1676" height="982" extended-state="6" />
+    <frame x="846" y="23" width="830" height="982" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -282,7 +280,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.21129943" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.094247244" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22335026" />
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="right" id="Database" order="3" weight="0.329235" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -552,8 +550,8 @@
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="346">
-            <caret line="305" column="67" lean-forward="true" selection-start-line="305" selection-start-column="67" selection-end-line="305" selection-end-column="67" />
+          <first_editor relative-caret-position="150">
+            <caret line="10" column="28" lean-forward="true" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
             <folding>
               <element signature="e#968#1894#0" />
               <element signature="e#1915#3084#0" />
