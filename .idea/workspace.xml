@@ -91,11 +91,10 @@
         <entry file="file://$PROJECT_DIR$/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="438">
-                <caret line="299" selection-start-line="299" selection-end-line="299" />
+              <first_editor relative-caret-position="333">
+                <caret line="98" column="23" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="23" />
                 <folding>
                   <element signature="e#968#1894#0" />
-                  <element signature="e#1915#3084#0" />
                   <element signature="e#9513#10928#0" />
                 </folding>
               </first_editor>
@@ -144,6 +143,7 @@
     <findStrings>
       <find>pic3</find>
       <find>restart</find>
+      <find>&amp;</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -176,9 +176,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="846" />
+    <option name="x" value="78" />
     <option name="y" value="23" />
-    <option name="width" value="830" />
+    <option name="width" value="1598" />
     <option name="height" value="982" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -272,7 +272,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="846" y="23" width="830" height="982" extended-state="0" />
+    <frame x="78" y="23" width="1598" height="982" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -282,7 +282,7 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.21129943" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22335026" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.11311054" />
       <window_info anchor="bottom" id="Docker" order="7" />
       <window_info anchor="right" id="Database" order="3" weight="0.329235" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -367,7 +367,6 @@
             <caret line="20" selection-start-line="20" selection-end-line="20" />
             <folding>
               <element signature="e#968#1894#0" />
-              <element signature="e#1915#3084#0" />
               <element signature="e#9513#10928#0" />
             </folding>
           </first_editor>
@@ -451,7 +450,6 @@
             <caret line="20" selection-start-line="20" selection-end-line="20" />
             <folding>
               <element signature="e#968#1894#0" />
-              <element signature="e#1915#3084#0" />
               <element signature="e#9513#10928#0" />
             </folding>
           </first_editor>
@@ -552,11 +550,10 @@
     <entry file="file://$PROJECT_DIR$/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="438">
-            <caret line="299" selection-start-line="299" selection-end-line="299" />
+          <first_editor relative-caret-position="333">
+            <caret line="98" column="23" selection-start-line="98" selection-start-column="23" selection-end-line="98" selection-end-column="23" />
             <folding>
               <element signature="e#968#1894#0" />
-              <element signature="e#1915#3084#0" />
               <element signature="e#9513#10928#0" />
             </folding>
           </first_editor>

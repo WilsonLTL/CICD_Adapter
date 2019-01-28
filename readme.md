@@ -84,6 +84,8 @@ unittest-py27:
     - apt-get update -qy
     - apt-get install -y python-dev python-pip
     - pip install -r requirements.txt
+    - nohup python Main.py &
+    - pocha unittest.py
   tags:
     - python2.7
 
@@ -93,6 +95,8 @@ unittest-py34:
     - apt-get update -qy
     - apt-get install -y python-dev python-pip
     - pip install -r requirements.txt
+    - nohup python Main.py &
+    - pocha unittest.py
   tags:
     - python3/4
 
